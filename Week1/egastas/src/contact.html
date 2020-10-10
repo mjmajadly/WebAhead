@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="tempstyle.css" rel="stylesheet" />
+    <link href="nav.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- start of navigation section  -->
+    <div class="container">
+        <div class="logo">
+            <a href="../index.html"><img src="img/logo.jpg" alt="logo"></a>
+        </div>
+        <div class="navbar">
+
+            <div class="icon-bar" onclick="Show()">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+
+            <ul id="nav-lists">
+                <li class="close"><span onclick="Hide()">×</span></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+        </div>
+    </div>
+
+    <script>
+        var navList = document.getElementById("nav-lists");
+        function Show() {
+            navList.classList.add("_Menus-show");
+        }
+
+        function Hide() {
+            navList.classList.remove("_Menus-show");
+        }
+    </script>
+    <!-- end of navigation section  -->
+    <div class="container5">
+        <h1><strong>Contact Us</strong></h1>
+
+        <form action="https://webahead7.github.io/egestas/">
+            <!--name-->
+            <label for="name"><strong>Name:</strong></label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+            <!--telephone-->
+            <label for="company name "><strong>Company Name:</strong></label>
+            <input type="text" id="company name" name="name" placeholder="Your Company Name" required>
+
+            <!--email-->
+            <label for="email "><strong>Email address:</strong></label>
+            <input type="text" id="email " name="email" placeholder="Your Email" required>
+
+            <div>
+                <fieldset>
+                    <legend style="font-weight:bold;">Your Preferred choice</legend>
+
+                    <input type="radio" id="car" name="contact" value="car">
+                    <label for="contactChoice1">Car</label>
+
+                    <input type="radio" id="Bike" name="contact" value="Bike">
+                    <label for="contactChoice2">Bike</label>
+
+                    <input type="radio" id="Plane" name="contact" value="Plane">
+                    <label for="contactChoice3">Plane</label>
+                </fieldset>
+            </div>
+
+            <!--message-->
+            <div class="messageBox">
+                <label for="message"><strong>Message:</strong></label>
+                <textarea id="message" name="message"></textarea>
+            </div>
+
+            <input type="submit" value="Submit">
+    </div>
+    </form>
+
+    <!--Subscribe newsletter-->
+    <form action="https://webahead7.github.io/egestas/">
+        <div class="container3">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>Subscribe now to receive our best deals for hiring, cars, motorcycles and private planes</p>
+        </div>
+
+
+
+        <div class="container5">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="mail" required>
+            <label>
+                <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+            </label>
+        </div>
+
+        <div class="container5">
+            <input type="submit" value="Subscribe">
+        </div>
+    </form>
+
+    <footer>
+        <div class="con">
+            <br>
+            <p1> Contact us
+            </p1>
+            <p>
+                egestas LTD.<br>
+                New york, broklyn, 9985-1684<br>
+                Tel: +1-985-789-641<br>
+                Fax: +1-792-718-700<br>
+                Email: Service@egestar.com <br>
+            </p>
+            <br>
+
+        </div>
+    </footer>
+</body>
+
+</html>

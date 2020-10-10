@@ -1,0 +1,295 @@
+/* Body style */
+
+body {
+  background-color: rgb(61, 76, 100);
+  color: aliceblue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+  font-size: 90px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  color: aliceblue;
+}
+
+p {
+  font-size: 24px;
+}
+
+.bdiv {
+  padding: 30px;
+}
+
+/* container of the image parent div */
+
+.homepagecontainerimg {
+  position: relative;
+  font-family: Arial;
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+}
+
+/* our value container */
+
+.ourvalueconatiner {
+  float: center;
+  width: 200px;
+  height: 200px;
+}
+
+.text-in-value {
+  position: center;
+  float: center;
+  text-align: center;
+  color: black;
+}
+
+/*  circle image */
+
+.circleimage {
+  position: center;
+  float: center;
+  width: 100px;
+  height: 100px;
+}
+
+/* the image in home page the three main images */
+
+.homepageimg {
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height: 500px;
+  width: 500px;
+}
+
+/* the tet inside the images  */
+
+.homepage-text-block-in-image {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* the parent of the three images  */
+
+.row {
+  content: "";
+  float: center;
+  display: flex;
+  clear: both;
+  justify-content: space-around;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* end css Home page  index.html */
+
+.container1 {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container1 img {
+  margin: 10px;
+  height: 300px;
+  width: 400px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.container2 h4 {
+  font-size: 30px;
+}
+
+.container2 {
+  display: flex;
+  width: 100%;
+  height: 40%;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* justify-items: center; */
+  align-items: center;
+  align-content: center;
+}
+
+.container2 img {
+  width: 60%;
+  height: 100%;
+  align-items: baseline;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+.aboutlinks, a:link, a:visited, a:hover, a:active {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.world {
+  display: block;
+  width: 80vw;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container1 img {
+  height: 300px;
+  width: 400px;
+}
+
+img {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the submit button with a specific background color etc */
+
+input[type=submit] {
+  background-color: #c4bd5e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+
+input[type=submit]:hover {
+  background-color: #c4bd5e;
+}
+
+/* Add a background color and some padding around the form */
+
+.container5 {
+  border-radius: 5px;
+  background-color: rgb(61, 76, 100);
+  padding: 20px;
+}
+
+/* Style the form element with a border around it */
+
+/* form {
+  border: 4px solid #f1f1f1;
+} */
+
+/* Add some padding and a grey background color to containers */
+
+.container3 {
+  padding: 20px;
+  background-color: rgb(61, 76, 100);
+}
+
+/* Style the input elements and the submit button */
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Add margins to the checkbox */
+
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* Style the submit button */
+
+input[type=submit] {
+  background-color: rgb(25, 36, 54);
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+.con {
+  font-size: large;
+  background-color: rgb(25, 36, 54);
+  padding: 10px;
+}
+
+/* The close button */
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  padding: 10px;
+}
+
+.con p1 {
+  font-size: x-large;
+}
+
+/* When moving the mouse over the close button */
+
+.closebtn:hover {
+  color: black;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container2 {
+    display: flex;
+    width: 100%;
+    height: 40%;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-items: center; */
+    align-items: center;
+    align-content: center;
+  }
+  .container2 img {
+    width: 100%;
+    height: 100%;
+    align-items: baseline;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+  }
+}
+
+.chip {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+

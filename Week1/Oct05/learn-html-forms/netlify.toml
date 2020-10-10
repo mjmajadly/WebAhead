@@ -1,0 +1,9 @@
+[build]
+  command = "npx netlify-lambda build server"
+  functions = "api/"
+[dev]
+  publish = "solution/"
+[[redirects]]
+  from = "/submit/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
