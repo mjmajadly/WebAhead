@@ -1,5 +1,8 @@
 ## Regular Expressions
 1. What is regex? Why would I use it? What are some examples of common regex usage?
+  + Regular Expressions (RegEx) in 100 Seconds: https://youtu.be/sXQxhojSdZM
+  + Used to Validate Text and Seach through Text
+
 2. Research:
   + How to use regex
     + (basic) pattern creation and repetitions
