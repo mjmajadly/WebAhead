@@ -2,6 +2,7 @@
 1. What is regex? Why would I use it? What are some examples of common regex usage?
   + Regular Expressions (RegEx) in 100 Seconds: https://youtu.be/sXQxhojSdZM
   + Used to Validate Text and Seach through Text
+  + Regex Reference https://fireship.io/lessons/regex-cheat-sheet-js/
 
 2. Research:
   + How to use regex
