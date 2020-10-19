@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>First-class Functions</title>
+</head>
+
+<body>
+  <h1>Open the console</h1>
+  <p>
+    console.log("output without (): "); <br>
+    logger(returnsOne);<br>
+    console.log("type without (): "); <br>
+    logger(typeof(returnsOne));<br>
+
+    console.log("\n\noutput with (): "); <br>
+    logger(returnsOne());<br>
+    console.log("type with (): "); <br>
+    logger(typeof(returnsOne()));<br>
+  </p>
+  <script>
+    const returnsOne = () => 1;
+    const logger = (arg) => console.log(arg);
+
+    // console.log("output without (): ");
+    logger(returnsOne);
+    // console.log("type without (): ");
+    logger(typeof (returnsOne));
+
+    // console.log("\n\noutput with (): ");
+    logger(returnsOne());
+    // console.log("type with (): ");
+    logger(typeof (returnsOne()));
+
+    const click = () => console.log(event.clientX, event.clientY);
+    window.addEventListener("click", click);
+
+    function one(callback) {
+      callback(1);
+    }
+    one(callbacks => console.log(callbacks));
+
+    // function asyncDouble(number, callback) {
+    //   setTimeout(() => callback(number * 2), 2000);
+    //   //Tip: 1000 ms = 1 second. 
+    //   //setTimeout(function, milliseconds, param1, param2, ...)
+    // }
+
+    // asyncDouble(10, console.log);
+
+    function light(string, callback) {
+      var increase = 0;
+      string.forEach(function (color) {
+        setTimeout(function () {
+          callback(color);
+        }, 1000 + increase);
+        increase += 1000;
+      });
+    }
+
+    function light(string, callback) {
+      var increase = 0;
+      string.forEach(function (color, i) {
+        console.log(i, color);
+        if (i === 2) {
+          string.splice(2, 0, "red");
+        }
+        if (i === 3) {
+          setTimeout(function () {
+            callback(color);
+          }, 2000 + increase);
+          increase -= 2000;
+        }
+        setTimeout(function () {
+          callback(color);
+        }, 2000 + increase);
+        increase += 2000;
+      });
+    }
+    // function light(string, callback) {
+    //   var inc = 0;
+    //   for (i = 0; i < string.length; i++) {
+    //     //  setTimeout(() => callback(string[i]), 2000 ); 
+    //     function myFunction() {
+    //       setTimeout(callback(string[i]), 1000+inc);
+    //     }
+    //     myFunction();
+    //     inc+=1000;
+    //   }
+    // }
+
+    light((["green", "amber", "red", "amber", "green", "finished"]), console.log);
+  </script>
+</body>
+
+</html>

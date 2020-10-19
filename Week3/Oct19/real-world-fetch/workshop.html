@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real world fetch</title>
+  <style>
+    .center {
+      margin: auto;
+      width: 180px;
+      border: 3px solid green;
+      padding: 10px;
+
+    }
+
+    button {
+      margin: 10px;
+      width: 130px;
+      height: 50px;
+      color: #fff;
+      background: rgb(63, 94, 251);
+      background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(62, 40, 45, 1) 100%);
+      align-content: center;
+
+    }
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: red;
+      opacity: 10;
+      font-style: italic;
+      font-weight: bolder;
+      text-align: center;
+
+      /* Firefox */
+    }
+
+    input {
+
+      color: #fff;
+      background: radial-gradient(circle, rgba(173, 63, 251, 0.9192051820728291) 0%, rgba(25, 2, 7, 1) 100%);
+    }
+  </style>
+</head>
+
+<body>
+  <form class="center">
+    <br>
+
+    <input type="text" name="input" id="input" for="input" placeholder="Pokemon Name"><br><br>
+    <button id="submit" class="vertical-center">Search Poke</button>
+
+    <!-- // code below for stuff before the workshop
+    <input type="text" name="input1" id="info" for="info" placeholder="Enter Your Name"><br><br>
+    <input type="text" name="input2" id="infoTwo" for="infoTwo" placeholder="Enter Your Age"><br><br>
+    <button id="submit" class="vertical-center">ClickMe</button> -->
+
+
+  </form>
+
+  <script>
+    // workshop
+    // //User input 
+    const newdata = document.querySelector("form");
+    const output = document.querySelector("output");
+
+    newdata.addEventListener("submit", event => {
+      event.preventDefault();
+      // const output = document.querySelector("output");
+
+      // output.innerHTML = "";
+
+      // get the value of the field with name="pokemon"
+      const formData = new FormData(event.target);
+      const pokename = formData.get("input");
+
+      const url = `https://pokeapi.co/api/v2/pokemon/${pokename}`;
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error(response.status);
+          return response.json();
+        })
+        .then(pokemonData => {
+          const heading = document.createElement("h2");
+          heading.textContent = pokemonData.pokename;
+          const image = document.createElement("img");
+          image.src = pokemonData.sprites.front_default;
+          image.alt = "";
+
+          output.appendChild(heading);
+          output.appendChild(image);
+        })
+        .then(data => console.log(data))
+        .catch(error => console.warn(error));
+    });
+
+
+    // // //User input 
+    // const newdata = document.querySelector("form");
+    // newdata.addEventListener("submit", event => {
+    //   event.preventDefault();
+
+    //   // new FormData()
+    //   const formData = new FormData(event.target);
+    //   const values = Object.fromEntries(formData);
+
+    //   // // event.target.elements
+    //   // const firstinfo = event.target.elements.info.value;
+    //   // const second = event.target.elements.infoTwo.value;
+    //   // var values = { firstinfo, second };
+
+    //   // //querySelector
+    //   // const firstinfo = document.querySelector("#info").value;
+    //   // const second = document.querySelector("#infoTwo").value;
+    //   // var values = { firstinfo, second };
+
+    //   const url = "https://reqres.in/api/users";
+    //   fetch(url, {
+    //     method: "POST",
+    //     body: JSON.stringify(values),
+    //     headers: { "content-type": "application/json" }
+    //   })
+    //     .then(response => {
+    //       if (!response.ok) {
+    //         throw new Error(response.status);
+    //       }
+    //       return response.json();
+    //     })
+    //     .then(data => console.log(data))
+    //     .catch(error => console.warn(error));
+    // });
+
+
+    // //first two steps below HTTP errors, Submitting data
+
+    // const info = { text: "do some woookrk", author: "luigi" };
+
+    // const url = "https://reqres.in/api/users";
+    // fetch(url, {
+    //   method: "POST",
+    //   body: JSON.stringify(info),
+    //   headers: { "content-type": "application/json" }
+    // })
+    //   .then(response => {
+    //     if (!response.ok) {
+    //       throw new Error(response.status);
+    //     }
+    //     return response.json();
+    //   })
+    //   .then(data => console.log(data))
+    //   .catch(error => console.warn(error));
+
+    // document.querySelector("form").addEventListener("submit", event => {
+    //   event.preventDefault();
+    // });
+
+  </script>
+</body>
+
+</html>
