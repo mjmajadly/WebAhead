@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Learn Testing</title>
+</head>
+
+<body>
+  <h1>Open the console</h1>
+
+  <script>
+    // the function we're testing
+    //start of part 5 Scoped assertions **************************
+    function square(x) {
+      return x * x;
+    }
+    function test(name, testFunction) {
+      function equal(num1, num2, message = `${num1} should equals ${num2}`) {
+        if (num1 === num2) {
+          console.info("correct!!! " + message);
+        } else {
+          console.error("wrong!!!!! " + message);
+        }
+      }
+      function notequal(num1, num2, message = `Expected ${num1} not to equal ${num2}`) {
+        if (num1 !== num2) {
+          console.info("correct!! " + message);
+        } else {
+          console.error("wrong!! " + message);
+        }
+      }
+
+      const batata = {
+        equal,
+        notequal
+      };
+      console.group(name);
+      testFunction(batata);
+      console.groupEnd();
+    }
+
+
+    // test("integer square working", t => {
+    //   const answer = square(2);
+    //   var testing = 4;
+    //   t.equal(answer, testing);
+    //   t.notequal(answer, testing);
+    //   testing = 6;
+    //   t.equal(answer, testing);
+    //   t.notequal(answer, testing);
+    // });
+    // test("decimal square working", t => {
+    //   const answer = square(3.5);
+    //   var testing = 12.25;
+    //   t.equal(answer, testing);
+    //   testing = 1.25;
+    //   t.equal(answer, testing);
+    // });
+
+
+    // //start of part 4 Custom messages **************************
+    // function square(x) {
+    //   return x * x;
+    // }
+    // function test(name, testFunction) {
+    //   console.group(name);
+    //   testFunction();
+    //   console.groupEnd();
+    // }
+    // function equal(num1, num2, message = `${num1} should equals ${num2}`) {
+    //   if (num1 === num2) {
+    //     console.info("correct!!! " + message);
+    //   } else {
+    //     console.error("wrong!!!!! " + message);
+    //   }
+    // }
+
+    // test("integer square working", () => {
+    //   const answer = square(2);
+    //   const testing = 4;
+    //   equal(answer, testing);
+    //   equal(answer, testing, "it works!!!! youre awesome!!");
+
+    // });
+    // test("decimal square working", () => {
+    //   const answer = square(3.5);
+    //   const testing = 1.25;
+    //   equal(answer, testing);      
+    //   equal(answer, testing, "it didnt work you ***** ");
+    // });
+
+
+
+    //start of part 3 Separating tests **************************
+    // function square(x) {
+    //   return x * x;
+    // }
+    // function test(name, testFunction) {
+    //   console.group(name);
+    //   testFunction();
+    //   console.groupEnd();
+    // }
+    // function equal(num1, num2) {
+    //   if (num1 === num2) {
+    //     console.info(`correct!!!  ${num1} equals ${num2}`);
+    //   } else {
+    //     console.error(`something wrong here. ${num1} not equal ${num2}`);
+    //   }
+    // }
+
+    // test("integer square working", () => {
+    //   const answer = square(2);
+    //   var testing = 4;
+    //   equal(answer, testing);
+    //   testing = 6;
+    //   equal(answer, testing);
+    // });
+    // test("decimal square working", () => {
+    //   const answer = square(3.5);
+    //   const testing = 1.25;
+    //   equal(answer, testing);
+    // });
+
+
+
+
+
+
+    // // //start of part 2 Make it reusable **************************
+    // function square(x) {
+    //   return x * x;
+    // }
+
+    // function equal(num1, num2) {
+    //   if (num1 === num2) {
+    //     console.log("correct");
+    //   } else {
+    //     console.error("something wrong here. we didnt get 12.25. we got " + testing);
+    //   }
+    // }
+    // const answer = square(3.5);
+    // const testing = 3.5 * 3.5;
+    // equal(answer, testing);
+
+    // function notequal(num1, num2) {
+    //   if (num1 === num2) {
+    //     console.info("something wrong here.  both nums the same");
+    //   } else {
+    //     console.error("not equal");
+    //   }
+    // }
+    // const answer1 = square(3);
+    // const testing1 = 10;
+    // notequal(answer1, testing1);
+
+      // //start of part 1 Begin to automate **************************
+      // function square(x) {
+      //   return x * x;
+      // }
+      // const answer = square(2);
+      // const testing =  4;
+      // if(testing === answer){
+      //   console.log("correct");
+      // }else{
+      //   console.error("something wrong here. we didnt get 4. we got " + testing);
+      // }
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

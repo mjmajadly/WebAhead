@@ -1,25 +1,50 @@
+
+
 //*****--------------------------------------------------------------*****
-// JSON Parse and Stringify (video 14) bringing everythin together
-const test = {
-    "people": [
-      {
-        "first": "Laurence"
-        , "last": "Svekis"
-      }
-      , {
-        "first": "Laurence"
-        , "last": "Svekis"
-      }
-      , {
-        "first": "Laurence"
-        , "last": "Svekis"
-      }
-      , {
-        "first": "Laurence"
-        , "last": "Svekis"
-      }
-    ]
-  };
+// JSON Parse and Stringify (video 16) 
+const url = "https://www.discoveryvip.com/shared/json.php?f=peopledata1";
+const output = document.querySelector(".output");
+fetch(url)
+  .then(function(res){
+    console.log(res);
+    return res.json();
+  }).then(function(data){
+    console.log(data);
+    console.log(data.data);
+    data.data.forEach(function(val) {
+    console.log(val.firstName+" "+val.lastName);
+    output.innerHTML += val.firstName+" "+val.lastName+"<br>";
+  })
+
+  }).catch(function(err){
+    console.warn(err);
+  })
+
+
+
+//*****--------------------------------------------------------------*****
+// JSON Parse and Stringify (video 14) 
+// const test = {
+//     "people": [
+//       {
+//         "first": "Laurence"
+//         , "last": "Svekis"
+//       }
+//       , {
+//         "first": "Laurence"
+//         , "last": "Svekis"
+//       }
+//       , {
+//         "first": "Laurence"
+//         , "last": "Svekis"
+//       }
+//       , {
+//         "first": "Laurence"
+//         , "last": "Svekis"
+//       }
+//     ]
+//   };
+
 // //*****--------------------------------------------------------------*****
 // // JSON Parse and Stringify (video 12)
 // const friend1 = {
