@@ -1,5 +1,6 @@
 function test(name, testFunction) {
   function equal(x, y, message = `Expected ${x} to equal ${y}`) {
+    if (x===null) return console.error("null value given")
     if (x === y) {
       console.info("Pass: " + message);
     } else {
