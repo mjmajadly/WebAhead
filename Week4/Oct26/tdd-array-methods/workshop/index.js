@@ -92,7 +92,7 @@ function reduce(array, dosomething, inc) {
   if (!Array.isArray(array)) return console.error("not an array")
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
-    newInc = dosomething(newInc, element, i); 
+    newInc = dosomething(newInc, element); 
     console.log(newInc)
     }
   // console.log("false")

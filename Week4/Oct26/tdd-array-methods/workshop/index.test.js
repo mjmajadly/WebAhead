@@ -77,3 +77,8 @@ test("reduce() should remove the elemnts i dont want", t => {
   var result = reduce([ "m", "a", "r", "i", "o"], (total, x) => total + x, "");
   t.equal(result, "mario");
 });
+
+// test("reduce() should remove the elemnts i dont want", t => {
+//   var result = reduce(["mario"], (total, x) => total + x, "");
+//   t.equal(result.name, "mario");
+// });
