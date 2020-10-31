@@ -1,29 +1,26 @@
-
-
 //*****--------------------------------------------------------------*****
-// JSON Parse and Stringify (video 16) 
+// JSON Parse and Stringify (video 16)
 const url = "https://www.discoveryvip.com/shared/json.php?f=peopledata1";
 const output = document.querySelector(".output");
 fetch(url)
-  .then(function(res){
+  .then(function (res) {
     console.log(res);
     return res.json();
-  }).then(function(data){
+  })
+  .then(function (data) {
     console.log(data);
     console.log(data.data);
-    data.data.forEach(function(val) {
-    console.log(val.firstName+" "+val.lastName);
-    output.innerHTML += val.firstName+" "+val.lastName+"<br>";
+    data.data.forEach(function (val) {
+      console.log(val.firstName + " " + val.lastName);
+      output.innerHTML += val.firstName + " " + val.lastName + "<br>";
+    });
   })
-
-  }).catch(function(err){
+  .catch(function (err) {
     console.warn(err);
-  })
-
-
+  });
 
 //*****--------------------------------------------------------------*****
-// JSON Parse and Stringify (video 14) 
+// JSON Parse and Stringify (video 14)
 // const test = {
 //     "people": [
 //       {
@@ -76,7 +73,7 @@ fetch(url)
 // console.log(fr2);
 // let html = "";
 // fr2.forEach(function(val){
-//    html += val.name + "<br>"; 
+//    html += val.name + "<br>";
 // });
 // // fr2[0].name = "Mike";
 // // fr2[1].name = "Kris";
@@ -112,7 +109,6 @@ fetch(url)
 //     console.log(key);
 //     friends[key]["Last Name"] = "Smith";
 // }
-
 
 // for (const key in friend){
 //     console.log(key);
@@ -151,7 +147,6 @@ fetch(url)
 // for (ind in friendList){
 //     console.log(friendList[ind].name);
 // }
-
 
 // const friends = ['Laurence', 'John', 'Steve', 'Linda', 'Jane'];
 // const newArr = [];
