@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+    <link href="src/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <a href="index.html" class="header-brand">Guess The Flag</a><!-- logo -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Game</a></li>
+                <li><a href="src/html/about.html">About US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <h1>Guess the Flag!!</h1> <br>
+
+        <img id="imgflag" class="imgflag" src="img/logo.jpg">
+        <br>
+        <h4 id="level"></h4>
+        <br>
+        <input type="text" name="username" id="username" placeholder="Enter Your Name">
+        <input type="text" name="input" id="inputAnswer" placeholder="Country Name">
+        <small class=""></small>
+
+        <button class="buttonstart" type="button" id="submit">Start game</button>
+        <h2 id="score"></h2>
+        <button class="buttonskip" type="button" id="skipper">Skip Level</button>
+    </div>
+
+    <script src="src/js/flag.js"></script>
+</body>
+
+</html>

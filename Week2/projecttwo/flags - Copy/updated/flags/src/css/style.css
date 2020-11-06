@@ -1,0 +1,269 @@
+* {
+    text-decoration-line: none;
+}
+
+body {
+    background: linear-gradient(217deg, rgba(255, 0, 0, .8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, .8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, .8), rgba(0, 0, 255, 0) 70.71%);
+    min-height: 100vh;
+}
+
+header {
+    /* background-color: #fff; */
+    /* white */
+    width: 100%;
+    /* height: 100px; */
+}
+
+header .header-brand {
+    font-family: 'Secular One', sans-serif;
+    font-size: 24px;
+    color: #111;
+    /*not fully black color, better than full black*/
+    font-weight: 900;
+    text-transform: uppercase;
+    display: block;
+    /*making it a block will make it easier to style afterwards*/
+    margin: 0px auto;
+    float: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header nav ul {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+header nav ul li {
+    display: inline-block;
+    /* float here gits rid of the gaps between the links*/
+    list-style: none;
+    /* no bullet points */
+    text-align: left;
+    padding: 0px 16px;
+}
+
+header nav ul li a {
+    font-family: 'Secular One', sans-serif;
+    font-size: 24px;
+    color: #111;
+    /*not fully black color, better than full black*/
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 590px) {
+    header .header-brand {
+        margin: 35px 0;
+        /* header 100px height, subtract line-height, and divide by half to center it*/
+        text-align: left;
+        line-height: 30px;
+        padding: 0 20px 0px 40px;
+        border-right: 3px solid #111;
+        float: left;
+    }
+    header nav ul {
+        margin: 25px 0px 0px 20px;
+        /* 25px because i chose line-height: 50px; below at 'li a'
+        100px-50px=50px/2=25px #centered */
+        float: right;
+    }
+    header nav ul li a {
+        line-height: 50px;
+    }
+}
+
+/* INDEX */
+
+.index-banner {
+    width: 100%;
+    /* height: 100vh; /* view height (dont include the header)  */
+    height: calc(100vh - 100px);
+    /* background-image: url('img/backgrnd.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+     */
+    /* cover the entire banner, not matter the height or the width */
+    display: table;
+    /* Add the blur effect
+    filter: blur(1px);
+    -webkit-filter: blur(1px); */
+}
+
+.centerit .container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.index-banner h2 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 70px;
+    color: #fff;
+    padding-bottom: 10px;
+    /* mix-blend-mode: difference; */
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+}
+
+.index-banner h1 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 28px;
+    font-weight: 100;
+    font-style: italic;
+    color: #fff;
+    /* mix-blend-mode: difference; */
+    text-align: center;
+    text-shadow: 2px 2px 8px #111;
+    line-height: 40px;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+}
+
+@media only screen and (min-width: 1000px) {
+    .wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }
+    .centerit {
+        display: table-cell;
+        vertical-align: top;
+    }
+    .index-banner {
+        height: 100vh;
+    }
+    .index-banner h1 {
+        display: block;
+        width: 700px;
+        margin: 0 auto;
+    }
+    .index-banner h2 {
+        width: 700px;
+        margin: 0 auto;
+    }
+}
+
+/* submit */
+
+.container {
+    /* margin-top: 100px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-animation-name: fade;
+    -webkit-animation-iteration-count: infinite;
+    /* -webkit-animation-duration: 6s; */
+    animation-name: fade;
+    animation-iteration-count: infinite;
+    /* animation-duration: 6s; */
+}
+
+.container h1 {
+    font-size: 50px;
+    margin: 0px;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 30px;
+    margin: 0px;
+    text-align: center;
+}
+.container h4 {
+    font-size: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+.container h3 {
+    font-size: 40px;
+    margin: 0px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+button {
+    font-family: 'Secular One', sans-serif;
+    font-size: 18px;
+}
+
+.container .buttonstart {
+    margin: 10px;
+    width: 130px;
+    height: 50px;
+    color: #fff;
+    background: rgb(63, 94, 251);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(62, 40, 45, 1) 100%);
+}
+
+.container .buttonskip {
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    background: rgb(173, 63, 251);
+    background: radial-gradient(circle, rgba(173, 63, 251, 0.9192051820728291) 0%, rgba(25, 2, 7, 1) 100%);
+}
+
+.container img {
+    /* width: 250px; */
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+    box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* height: 250px; */
+}
+
+.flexdisplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* 
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background-color: #fff;
+} */
+
+small {
+    color: #fff;
+}
+
+.failed {
+    color: rgb(243, 0, 0);
+    font-size: 30px;
+    mix-blend-mode: difference;
+    /* text-shadow: 2px 2px 8px #111; */
+}
+
+.pass {
+    color: lightgreen;
+    font-size: 30px;
+    /* text-shadow: 2px 2px 8px #111; */
+}
+
+@media only screen and (max-width: 600px) {
+    .container img {
+        width: 300px;
+        -moz-box-shadow: 0 0 3px #ccc;
+        -webkit-box-shadow: 0 0 3px #ccc;
+        box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        height: 250px;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "testnodeserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js | tap-spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "supertest": "^6.0.0",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.1"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&display=swap" rel="stylesheet">
+    <!-- <link href="resetstylesheet.css" rel="stylesheet" /> -->
+    <link href="../css/style.css" rel="stylesheet" />
+    <link href="../css/fireworks.css" rel="stylesheet" />
+    <!-- <link href="style2.css" rel="stylesheet" /> -->
+</head>
+
+<body>
+    <!-- header section -->
+    <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+    </div>
+    <header>
+        <a href="../../index.html" class="header-brand">Guess The Flag</a><!-- logo -->
+        <nav>
+            <ul>
+                <li><a href="../../index.html">Game</a></li>
+                <li><a href="about.html">About US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    </div>
+
+    <div class="container">
+
+        <h1>YOU FINISHED THE GAME</h1>
+
+        <br>
+        <h3 type="text" name="username" id="username"></h3>
+        <br>
+        <h2>Your score is</h2>
+        <h2 class="scoreStyle" type="text" name="score" id="score"></h2>
+        <h2 class="CorrectAnswersStyle">Number of correct answers: </h2>
+        <h2 type="text" name="correctanswers" id="correctanswers">" out of 20!"</h2>
+        <br>
+        <h2 type="text" name="message" id="message"></h2>
+        <br>
+        <div> <img class="gif" name="gif" id="gif"> </div>
+        <button class="buttonstart" type="button" id="submit" onclick="location.href='../../index.html'">Play
+            Again</button>
+    </div>
+
+    <script src="../js/endgame.js"></script>
+
+</body>
+
+</html>
