@@ -83,12 +83,26 @@ form.addEventListener('submit', (event) => {
 
 const colors = {
   male: 'blue',
-  female: 'red',
+  female: 'gold',
   unknown: 'white',
 };
+
+const bckgrd = {
+  male:
+    'radial-gradient(circle, rgba(63,251,239,0.9192051820728291) 0%, rgba(37,34,134,0.7602605926856566) 48%, rgba(30,112,119,1) 79%, rgba(25,2,7,1) 100%)',
+  female:
+    'radial-gradient(circle, rgba(251,63,243,0.9192051820728291) 0%, rgba(134,34,34,0.7602605926856566) 48%, rgba(119,30,112,1) 79%, rgba(25,2,7,1) 100%)',
+  unknown:
+    'radial-gradient(circle, rgba(251,235,63,0.9192051820728291) 0%, rgba(134,80,34,0.7602605926856566) 48%, rgba(30,119,34,1) 79%, rgba(25,2,7,1) 100%)',
+};
+function changeBackground(color) {
+  document.body.style.background = color;
+}
 function updateDom(data) {
   output.innerHTML = '';
   const { gender } = data;
+  changeBackground(bckgrd[gender]);
+
   const heading = document.createElement('h2');
   heading.textContent = data.name;
   heading.style.textTransform = 'capitalize';
