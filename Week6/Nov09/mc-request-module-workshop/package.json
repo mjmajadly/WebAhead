@@ -1,0 +1,19 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "Request module workshop",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.test.js | tap-spec",
+    "solution-test": "nodemon solution/solution.test.js | tap-spec"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nock": "^12.0.3",
+    "nodemon": "^2.0.2",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.13.2",
+    "tape-promise": "^4.0.0"
+  }
+}

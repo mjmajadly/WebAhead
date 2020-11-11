@@ -2,13 +2,25 @@
 remove any of the existing style declarations that apply fonts
 and colour. You may wish to target additional HTML
 elements from index.html. */
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
-    "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial,
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-feature-settings: "tnum";
+* {
+  text-align: center;
 }
-
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-feature-settings: 'tnum';
+}
+header {
+  text-align: left;
+}
+header h2 {
+  text-align: left;
+}
 h1 {
   color: hsl(220, 10%, 10%);
   font-weight: 500;
@@ -16,13 +28,21 @@ h1 {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: hsl(220, 10%, 20%);
+  width: 60%;
 }
 
 .card__media img {
   border-radius: 5px;
+  width: 100%;
 }
-
+.card__media {
+  align-items: center;
+}
 .card__title {
   font-weight: 500;
   font-size: 1.125rem;
@@ -33,10 +53,26 @@ h1 {
 }
 
 .card__tip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: left;
+  text-align: left;
   font-weight: 500;
   font-size: 0.875rem;
+  width: 55%;
 }
-
+.card__preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 100%;
+}
+hr {
+  width: 80%;
+}
 .card__button {
   font-weight: 400;
   cursor: pointer;

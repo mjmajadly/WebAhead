@@ -1,0 +1,109 @@
+body {
+  background-color: #000;
+  font-family: 'Droid Sans';
+}
+#wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+#menu-button {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 3;
+  font-size: 25px;
+}
+#menu-button .fa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: #fff;
+  text-shadow: 0 0 1px #000;
+}
+#menu-button .fa-times {
+  opacity: 0;
+}
+#menu-check:checked ~ #wrapper #page {
+  transform: translateX(280px);
+  transition: transform 0.3s cubic-bezier(0.17, 0.67, 0.68, 1.13);
+}
+#menu-check:checked ~ #wrapper header {
+  border-top-left-radius: 5px;
+}
+#menu-check:checked ~ #menu-button .fa-bars {
+  opacity: 0;
+}
+#menu-check:checked ~ #menu-button .fa-times {
+  opacity: 1;
+}
+#nav {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  width: 280px;
+  background-color: #3498db;
+  background-image: url(http://wallpaper-download.net/wallpapers/abstract-wallpapers-blurred-background-wallpaper-34795.jpg);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #fff;
+  padding-right: 20px;
+}
+#nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#nav ul li {
+  padding: 5px 10px;
+  min-height: 30px;
+  line-height: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+#nav ul li.profile {
+  text-align: right;
+}
+li.profile img {
+  float: center;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+#page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+  transition: transform 0.3s ease-in-out;
+}
+header {
+  height: 40px;
+  line-height: 40px;
+  background-color: #2980b9;
+  text-align: center;
+  transition: border-top-left-radius 0.3s ease-in-out;
+}
+#content {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+.card {
+  background-color: #fff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.15);
+}

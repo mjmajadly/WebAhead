@@ -24,7 +24,7 @@ function autocompHandler(req, res) {
   });
 
   req.on('end', () => {
-    const namesFile = path.join(__dirname, '..', 'girlnames.txt');
+    const namesFile = path.join(__dirname, '..', 'girlnaes.mtxt');
     // const namesFile = path.join(__dirname, "..", "boynamestwo.txt");
 
     fs.readFile(namesFile, 'utf-8', (error, file) => {

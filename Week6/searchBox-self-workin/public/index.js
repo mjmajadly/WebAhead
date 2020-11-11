@@ -1,7 +1,9 @@
-/* eslint-disable function-paren-newline */
-/* eslint-disable comma-dangle */
-/* eslint-disable implicit-arrow-linebreak */
 let names = [];
+let lastNamesIncludesInputText = [];
+
+const form = document.querySelector('form');
+const output = document.querySelector('output');
+const input = document.querySelector('input');
 
 const removeChildElements = (element) => {
   const elem = element;
@@ -33,9 +35,7 @@ window.addEventListener('load', () => {
       throw new Error(err);
     });
 });
-
-let lastNamesIncludesInputText = [];
-document.querySelector('.searchBox').addEventListener('keyup', (event) => {
+input.addEventListener('keyup', (event) => {
   const inputText = event.target.value.toLowerCase();
   const namesIncludesInputText = filterMatchText(names, inputText);
   const searchOptions = document.getElementById('searchOptions');
@@ -51,28 +51,28 @@ document.querySelector('.searchBox').addEventListener('keyup', (event) => {
     lastNamesIncludesInputText = [...namesIncludesInputText];
   }
 });
-
-const form = document.querySelector('form');
-const output = document.querySelector('output');
-
+let nametest = '';
 form.addEventListener('submit', (event) => {
   // stop the form submitting and reloading the page
   event.preventDefault();
-
+  if (input.value === '') {
+    alert('No input! Please enter a Name!');
+    return;
+  }
   const formData = new FormData(event.target);
   const name = formData.get('kidname');
-
-  fetch(`https://gender-api.com/get?name=${name}&key=YeFJcGQluraWPyRCsP`)
+  nametest = input.value;
+  fetch(`/nameSearch?name=${nametest}`, {
+    method: 'POST',
+    body: input.value,
+  })
     .then((response) => {
-      if (!response.ok) throw new Error(response.status);
       return response.json();
     })
-    // if we get a successful response
-    .then((data) => {
-      updateDom(data);
+    .then((response) => {
+      updateDom(response);
     })
-    // if the request is unsuccessful
-    .catch((error) => {
+    .catch((err) => {
       if (error.message === '404') {
         output.textContent = `⚠️ Couldn't find "${name}"`;
       } else {
@@ -86,7 +86,6 @@ const colors = {
   female: 'red',
   unknown: 'white',
 };
-
 function updateDom(data) {
   output.innerHTML = '';
   const { gender } = data;
@@ -103,7 +102,6 @@ function updateDom(data) {
   image.src = `/public/img/${gender}.jpg`;
   image.alt = '';
   heading.style.color = colors[gender];
-
   output.appendChild(heading);
   output.appendChild(headingtwo);
   output.appendChild(image);

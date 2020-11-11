@@ -1,0 +1,20 @@
+{
+  "name": "going-on-a-bear-hunt",
+  "version": "1.0.0",
+  "description": "🐻 workshop to understand core node modules",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "solution": "nodemon solution/src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.6"
+  }
+}
