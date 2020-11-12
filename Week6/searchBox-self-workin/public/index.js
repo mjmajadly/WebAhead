@@ -61,6 +61,7 @@ input.addEventListener('keyup', (event) => {
   }
 });
 let nametest = '';
+var nameerr = '';
 form.addEventListener('submit', (event) => {
   // stop the form submitting and reloading the page
   event.preventDefault();
@@ -74,9 +75,10 @@ form.addEventListener('submit', (event) => {
   }
   const formData = new FormData(event.target);
   const name = formData.get('kidname');
+  nameerr = name;
   nametest = input.value;
   const link = `/nameSearch?name=${nametest}`;
-  fetchWrapper(link, 'POST', input.value);
+  fetchWrapper(link, 'POST', nametest);
 });
 
 function fetchWrapper(url, typeMethod, bodyValue) {
@@ -92,7 +94,7 @@ function fetchWrapper(url, typeMethod, bodyValue) {
     })
     .catch((error) => {
       if (error.message === '404') {
-        output.textContent = `⚠️ Couldn't find "${name}"`;
+        output.textContent = `⚠️ Couldn't find "${nameerr}"`;
       } else {
         output.textContent = '⚠️ Something went wrong';
       }
