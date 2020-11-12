@@ -5,9 +5,19 @@ const form = document.querySelector('form');
 const output = document.querySelector('output');
 const input = document.querySelector('input');
 
-const removeChildElements = (element) => {
-  const elem = element;
-  elem.innerHTML = '';
+const colors = {
+  male: 'blue',
+  female: 'gold',
+  unknown: 'white',
+};
+
+const bckgrd = {
+  male:
+    'radial-gradient(circle, rgba(63,251,239,0.9192051820728291) 0%, rgba(37,34,134,0.7602605926856566) 48%, rgba(30,112,119,1) 79%, rgba(25,2,7,1) 100%)',
+  female:
+    'radial-gradient(circle, rgba(251,63,243,0.9192051820728291) 0%, rgba(134,34,34,0.7602605926856566) 48%, rgba(119,30,112,1) 79%, rgba(25,2,7,1) 100%)',
+  unknown:
+    'radial-gradient(circle, rgba(251,235,63,0.9192051820728291) 0%, rgba(134,80,34,0.7602605926856566) 48%, rgba(30,119,34,1) 79%, rgba(25,2,7,1) 100%)',
 };
 
 const filterMatchText = (array, text) =>
@@ -41,7 +51,6 @@ input.addEventListener('keyup', (event) => {
   const searchOptions = document.getElementById('searchOptions');
 
   if (!arraysEqual(lastNamesIncludesInputText, namesIncludesInputText)) {
-    removeChildElements(searchOptions);
     namesIncludesInputText.forEach((name) => {
       const newOption = document.createElement('option');
       newOption.value = name;
@@ -59,12 +68,21 @@ form.addEventListener('submit', (event) => {
     alert('No input! Please enter a Name!');
     return;
   }
+  if (!/^[a-zA-Z]*$/g.test(input.value)) {
+    alert('Invalid characters');
+    return;
+  }
   const formData = new FormData(event.target);
   const name = formData.get('kidname');
   nametest = input.value;
-  fetch(`/nameSearch?name=${nametest}`, {
-    method: 'POST',
-    body: input.value,
+  const link = `/nameSearch?name=${nametest}`;
+  fetchWrapper(link, 'POST', input.value);
+});
+
+function fetchWrapper(url, typeMethod, bodyValue) {
+  fetch(url, {
+    method: typeMethod,
+    body: bodyValue,
   })
     .then((response) => {
       return response.json();
@@ -72,29 +90,15 @@ form.addEventListener('submit', (event) => {
     .then((response) => {
       updateDom(response);
     })
-    .catch((err) => {
+    .catch((error) => {
       if (error.message === '404') {
         output.textContent = `⚠️ Couldn't find "${name}"`;
       } else {
         output.textContent = '⚠️ Something went wrong';
       }
     });
-});
+}
 
-const colors = {
-  male: 'blue',
-  female: 'gold',
-  unknown: 'white',
-};
-
-const bckgrd = {
-  male:
-    'radial-gradient(circle, rgba(63,251,239,0.9192051820728291) 0%, rgba(37,34,134,0.7602605926856566) 48%, rgba(30,112,119,1) 79%, rgba(25,2,7,1) 100%)',
-  female:
-    'radial-gradient(circle, rgba(251,63,243,0.9192051820728291) 0%, rgba(134,34,34,0.7602605926856566) 48%, rgba(119,30,112,1) 79%, rgba(25,2,7,1) 100%)',
-  unknown:
-    'radial-gradient(circle, rgba(251,235,63,0.9192051820728291) 0%, rgba(134,80,34,0.7602605926856566) 48%, rgba(30,119,34,1) 79%, rgba(25,2,7,1) 100%)',
-};
 function changeBackground(color) {
   document.body.style.background = color;
 }

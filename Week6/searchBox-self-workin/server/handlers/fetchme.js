@@ -2,6 +2,7 @@
 const requester = require('request');
 const url = require('url');
 const querystring = require('querystring');
+const missingHandler = require('./missingHandler');
 
 // dotenv will read a .env file into your process.env
 require('dotenv').config();
@@ -38,8 +39,8 @@ const fetchmeHandler = (request, response) => {
       console.log(`Status Code: ${statusCode}`);
       console.log(`Content Type: ${contentType}`);
       // send a response back to the client
-      response.writeHead(500, { 'content-type': 'text/plain' });
-      response.end('Sorry, there was a server error');
+      res.statusCode = 500;
+      missingHandler(request, res);
       return;
     }
     response.writeHead(200, { 'content-type': 'text/html' });

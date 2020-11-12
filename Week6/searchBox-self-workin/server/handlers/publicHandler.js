@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const missingHandler = require('./missingHandler');
 
 const types = {
   html: 'text/html',
@@ -18,8 +19,7 @@ function publicHandler(req, res) {
   const filePath = path.join(__dirname, '..', '..', url);
   fs.readFile(filePath, (error, file) => {
     if (error) {
-      res.writeHead(404, { 'content-type': 'text/html' });
-      res.end('<h1>Not found</h1>');
+      missingHandler(req, res);
     } else {
       res.writeHead(200, { 'content-type': type });
       res.end(file);
