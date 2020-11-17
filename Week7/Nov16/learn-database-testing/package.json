@@ -1,0 +1,24 @@
+{
+  "name": "learn-database-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon workshop/server.js",
+    "test": "cross-env NODE_ENV=test tape 'workshop/tests/*' | tap-spec"
+  },
+  "keywords": [],
+  "author": "Oliver Phillips <hello@oliverjam.es> (https://oliverjam.es/)",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "pg": "^8.3.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4",
+    "tap-spec": "^5.0.0",
+    "tape": "^5.0.1"
+  }
+}

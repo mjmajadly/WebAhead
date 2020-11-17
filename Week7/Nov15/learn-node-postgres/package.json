@@ -1,0 +1,21 @@
+{
+  "name": "learn-node-postgres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "workshop/server.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "pg": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "dev": "nodemon workshop/server.js",
+    "solution": "nodemon solution/server.js"
+  },
+  "keywords": [],
+  "author": "Oliver Phillips <hello@oliverjam.es> (https://oliverjam.es/)",
+  "private": true,
+  "license": "ISC"
+}
