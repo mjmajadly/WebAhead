@@ -1,0 +1,18 @@
+/*Comic Neue Font*/
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap");
+
+.Businesses {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.Businesses h2 {
+  font-family: "comic neue";
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.Businesses .container img {
+  order: 2;
+  cursor: pointer;
+}

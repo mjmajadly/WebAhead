@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript">
+      function allLetter(inputtxt) {
+        var letters = /^[A-Za-z]+$/;
+        if (inputtxt.value.match(letters)) {
+          alert('Your name have accepted : you can try another');
+          return true;
+        } else {
+          alert('Please input alphabet characters only');
+          return false;
+        }
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+            
+    <h2>Permanent Address</h2>
+            <textarea id="txtarea_consolidation"></textarea><br />
+            <button onclick="javascript:validate();" style="margin: 5px 0px">
+      Validate
+    </button>
+  </body>
+</html>

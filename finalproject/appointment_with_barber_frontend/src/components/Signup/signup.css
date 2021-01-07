@@ -1,0 +1,12 @@
+form {
+  text-align: center;
+}
+
+.signup {
+  padding-top: 50px;
+}
+
+fieldset {
+  margin: auto;
+  width: 80%;
+}

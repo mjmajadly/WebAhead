@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap");
+
+.title {
+  font-family: "Ruslan Display", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 65px;
+  color: #376cba;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 16px;
+}

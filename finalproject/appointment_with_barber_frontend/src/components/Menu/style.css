@@ -1,0 +1,45 @@
+.Toastify__toast-container--bottom-center .Toastify__toast-body {
+  text-align: center;
+  font-size: 35px;
+}
+
+.menu {
+  position: absolute;
+  width: 248px;
+  height: 812px;
+  left: 1px;
+  top: 0px;
+  z-index: 19;
+  top: 0;
+  left: 0;
+  background: #f1f1f1;
+
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 10px 18px #3d3d3d;
+}
+.topmenusection {
+  display: flex;
+  align-items: flex-start;
+  background: #376cba;
+  width: 100%;
+  height: 64px;
+  padding: 15px 10px;
+  height: 94px;
+}
+.menuComponent {
+  padding: 40px 20px;
+  border-bottom: 1px solid #376cba;
+  font-size: 24px;
+  line-height: 31px;
+  cursor: pointer;
+  color: #0a3370;
+}
+
+.navlink {
+  text-decoration: none;
+}
+
+.navlink:visited {
+  color: #0a3370;
+}

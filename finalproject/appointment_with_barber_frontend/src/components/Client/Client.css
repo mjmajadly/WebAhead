@@ -1,0 +1,25 @@
+.client-card {
+  position: relative;
+  width: 311px;
+  height: 76.98px;
+  background: #ffffff;
+  opacity: 0.6;
+  border-radius: 70px 18.5px 18.5px 70px;
+  margin: 20px auto;
+}
+
+.full-name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  font-size: 15px;
+}
+
+.hour {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  font-size: 15px;
+}

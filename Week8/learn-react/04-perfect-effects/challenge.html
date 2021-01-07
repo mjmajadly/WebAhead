@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <title>04 Perfect effects | FAC React</title>
+
+  <body>
+    <!-- These scripts will make React and ReactDOM globally available. -->
+    <script src="./../assets/react@16.9.0/umd/react.development.js"></script>
+    <script src="./../assets/react-dom@16.9.0/umd/react-dom.development.js"></script>
+    <!-- This will let us write JSX and ES6 in a script tag with a special type of "text/babel" -->
+    <script src="./../assets/babel-standalone@7.6.0/babel.js"></script>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+      const root = document.getElementById("root");
+
+      function Toggle(props) {
+        const [open, setOpen] = React.useState(false);
+        const toggleOpen = () => setOpen(!open);
+        return (
+          <div>
+            <button onClick={toggleOpen}>Toggle</button>
+            {open ? <div>{props.children}</div> : null}
+          </div>
+        );
+      }
+
+      function App() {
+        return <Toggle>This text is hidden until the button is clicked</Toggle>;
+      }
+
+      ReactDOM.render(<App />, root);
+    </script>
+  </body>
+</html>

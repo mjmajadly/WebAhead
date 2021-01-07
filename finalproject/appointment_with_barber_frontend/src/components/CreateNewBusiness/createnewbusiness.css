@@ -1,0 +1,49 @@
+.addEditBusiness {
+  display: flex;
+  flex-direction: column;
+}
+.addEditBusiness form {
+  display: flex;
+  flex-direction: column;
+}
+.addEditBusiness form select {
+  width: 40%;
+  margin: auto;
+}
+.choosemonth {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+#weekinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
+
+.dayinfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.dayinfo div {
+  width: 100px;
+}
+.starthour {
+  width: 80px !important;
+}
+.endhour {
+  width: 80px !important;
+}
+.timediffence {
+  margin-top: 20px;
+}
+.timesection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 180px;
+  color: #14051d;
+}

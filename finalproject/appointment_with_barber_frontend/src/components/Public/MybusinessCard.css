@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  width: 311px;
+  height: 76.98px;
+  background: #ffffff;
+  border-radius: 70px 18.5px 18.5px 70px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  position: absolute;
+  width: 70.66px;
+  height: 76.98px;
+  border: 2px solid #eb5757;
+  box-sizing: border-box;
+  border-radius: 70px;
+  left: 0px;
+}
+
+.business-name {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  color: #114b5f;
+}
+
+.location {
+  position: absolute;
+  left: 110px;
+  top: 52px;
+  opacity: 0.6;
+  font-size: 10px;
+  color: #114b5f;
+}
+
+.favorite-icon {
+  position: absolute;
+  bottom: 54.68%;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  top: 65%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.avg {
+  position: absolute;
+  transform: translate(-50%, 50%);
+  top: 10px;
+
+  left: 85%;
+  font-size: 10px;
+  color: #114b5f;
+}
+
+.edge {
+  position: absolute;
+  width: 18.59px;
+  height: 100%;
+  left: 100%;
+  top: 0px;
+  transform: translateX(-100%);
+  background: rgba(26, 147, 111, 0.5);
+  border-radius: 19px;
+}
+
+.location-icon {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  opacity: 0.3;
+  left: 97px;
+  top: 52px;
+}
+
+/*fav card*/
+
+.fav-card {
+  position: relative;
+  width: 311px;
+  height: 76.98px;
+  background: #ffffff;
+  border-radius: 70px 18.5px 18.5px 70px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.bs-card {
+  position: relative;
+  width: 311px;
+  height: 76.98px;
+  background: #ffffff;
+  border-radius: 70px 18.5px 18.5px 70px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.business-name-fav {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-40%);
+  color: #114b5f;
+}
+
+.time {
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-40%);
+  color: #114b5f;
+}
+
+.delete-icon {
+  position: absolute;
+  left: 85%;
+  transform: translateX(-2px);
+  top: 10px;
+  width: 23px;
+  height: 23px;
+}
+
+.edit-icon {
+  position: absolute;
+  left: 85%;
+  top: 40px;
+  width: 23px;
+  height: 23px;
+}
+
+.owner-name {
+  position: absolute;
+  top: 10px;
+  left: 100px;
+  color: #000;
+}
+
+.business-address {
+  position: absolute;
+  width: 118px;
+  height: 14px;
+  left: 120px;
+  top: 45%;
+  font-size: 12px;
+  color: #000000;
+}
+
+.phone {
+  position: absolute;
+  left: 120px;
+  top: 70%;
+  font-size: 12px;
+  color: #000000;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+}
+.calendar-icon {
+  position: absolute;
+  top: 30px;
+  left: 80%;
+  width: 30px;
+}

@@ -1,0 +1,14 @@
+.HoursPage .date {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.HoursPage .hours {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  row-gap: 30px;
+  padding: 0px 60px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}

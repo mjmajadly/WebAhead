@@ -1,0 +1,14 @@
+.editProfile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.passchange {
+  margin: 20px;
+  color: rgb(1, 1, 109);
+  background-color: none;
+  border: none;
+}
+.buttonchangepass {
+  background: #376cba !important;
+}
